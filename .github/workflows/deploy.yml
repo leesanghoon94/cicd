@@ -1,0 +1,12 @@
+name: deploy
+on:
+  workflow_run:
+    workflows: ["pylint", "pytest"]
+    types:
+      - completed
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: remote-ssh
+    - uses: appleboy/ssh-action@v0.1.8
