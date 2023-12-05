@@ -10,3 +10,9 @@ jobs:
     steps:
     - name: remote-ssh
     - uses: appleboy/ssh-action@v0.1.8
+      with:
+        host: 3.34.135.112
+        username: ec2-user
+        key: ${{ secrets.KEY}}
+        port: ${{ secrets.PORT }}
+        script: whoami
