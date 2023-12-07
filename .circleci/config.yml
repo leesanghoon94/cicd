@@ -44,6 +44,17 @@ jobs:
             coverage run -m pytest
             coverage report
             coverage html
+      - store_artifacts:
+          path: htmlcov
+      - add_ssh_keys:
+          fingerprints:
+            - "8b:b5:28:05:23:c4:c0:cc:07:97:c2:1c:46:28:e6:85"
+      - run:
+          name: Run deploy
+          command: |
+            ssh ec2-user@52.79.167.226
+            cd cicd
+            git pull
 
           # name: remote-ssh
           # with:
