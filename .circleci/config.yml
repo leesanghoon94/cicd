@@ -53,7 +53,7 @@ jobs:
       - run:
           name: Run deploy
           command: |
-            ssh -o "StrictHostKeyChecking no" ec2-user@52.79.167.226 "cd cicd && git pull"
+            ssh -o "StrictHostKeyChecking no" ec2-user@43.202.57.228 "cd cicd && git pull"
 
           # name: remote-ssh
           # with:

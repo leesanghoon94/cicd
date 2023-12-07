@@ -20,5 +20,3 @@ def index():
     if abcdefg == 1:
         return "<p>index1</p>"
     return f"<p>index{abcdefg}</p>"
-
-
