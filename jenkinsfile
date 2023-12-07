@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('start') {
             steps {
-                slacksend (channel: '#cicd-test', message: "start")
+                slackSend (channel: '#cicd-test', message: "start")
             }
         }
         stage('ci') {
@@ -31,7 +31,7 @@ pipeline {
         }
         stage('end') {
             steps {
-                slacksend (channel: '#cicd-test', message: "endd")
+                slackSend (channel: '#cicd-test', message: "endd")
             }
         }
     }
