@@ -52,7 +52,7 @@ jobs:
       - run:
           name: Run deploy
           command: |
-            ssh ec2-user@52.79.167.226
+            ssh -o "StrictHostKeyChecking no" ec2-user@52.79.167.226
             cd cicd
             git pull
 
