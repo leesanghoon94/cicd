@@ -32,7 +32,7 @@ pipeline {
         stage('end') {
             agent any
             steps {
-                slackSend (channel: '#cicd-test', message: "endd")
+                slackSend (channel: '#cicd-test', message: "end")
             }
         }
     }
